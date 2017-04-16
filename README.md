@@ -1,5 +1,5 @@
 # Etherpass
 
-Etherpass is an opinionated blockchain-based password manager.
+Leverage your password security with the blockchain.
 
 Find us at [https://etherpass.github.io/](https://etherpass.github.io/)
