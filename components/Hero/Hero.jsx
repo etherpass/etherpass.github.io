@@ -36,7 +36,7 @@ export default () => (
         </List>
       </div>
       <div>
-        <img src="https://wallet.coinbase.com/assets/images/hero/wallet-image.png" />
+        <img src="/static/etherpass.png" alt="etherpass" />
       </div>
     </Flex>
     <style jsx>
@@ -46,6 +46,9 @@ export default () => (
         }
         div:first-child {
           max-width: 30rem;
+        }
+        div:last-child {
+          width: 80%;
         }
         div > img {
           max-width: 100%;
