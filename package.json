@@ -1,0 +1,18 @@
+{
+  "name": "etherpass-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "keywords": [],
+  "author": "optimusway <optimusway@gmail.com> (https://github.com/optimusway)",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-icons": "^3.0.5"
+  }
+}
