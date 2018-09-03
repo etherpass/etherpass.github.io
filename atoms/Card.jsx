@@ -1,6 +1,6 @@
 export default ({title, src, children}) => (
   <div>
-    {src && <img src={src} />}
+    {src && <div />}
     <h3>{title}</h3>
     <p>{children}</p>
     <style jsx>{`
@@ -20,8 +20,15 @@ export default ({title, src, children}) => (
       div:last-child {
         margin-right: 0;
       }
-      img {
+      div > div {
+        background: url(${src});
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
         border-radius: 50%;
+        height: 128px;
+        width: 128px;
+        margin: 0 auto 1rem;
       }
     `}</style>
   </div>

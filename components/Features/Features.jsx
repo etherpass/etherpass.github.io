@@ -1,10 +1,10 @@
 import React from 'react';
-import {Section, Flex, Circle} from '../../atoms';
+import {Section, Flex, Circle, NavHeader} from '../../atoms';
 import {FiDatabase, FiEyeOff, FiShare} from 'react-icons/fi';
 
 const Features = () => (
-  <Section dir="column">
-    <h2>Reinvent the way password managers work</h2>
+  <Section bg="#fbfbfb">
+    <NavHeader name="why">Reinvent the way password managers work</NavHeader>
     <Flex align="top" justify="space-between">
       <div>
         <Circle>

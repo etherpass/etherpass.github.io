@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
   },
   "keywords": [],
   "author": "optimusway <optimusway@gmail.com> (https://github.com/optimusway)",

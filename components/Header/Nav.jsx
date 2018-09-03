@@ -2,19 +2,19 @@ export default () => (
   <nav>
     <ul>
       <li>
-        <a>Why Etherpass</a>
+        <a href="#why">Why Etherpass</a>
       </li>
       <li>
-        <a>How it works</a>
+        <a href="#how">How it works</a>
       </li>
       <li>
-        <a>Team</a>
+        <a href="#team">Team</a>
       </li>
       <li>
-        <a>Roadmap</a>
+        <a href="#roadmap">Roadmap</a>
       </li>
       <li>
-        <button>Join token sale</button>
+        <a href="#ico">Join token sale</a>
       </li>
     </ul>
     <style jsx>{`
@@ -31,19 +31,21 @@ export default () => (
       ul li:last-of-type {
         margin-left: 2rem;
       }
-      a,
-      button {
+      a {
         display: flex;
         align-items: center;
         height: 60px;
+        text-decoration: none;
+        color: #3d5066;
       }
-      button {
+      li:last-child a {
         color: #fff;
         background-color: #1452f5;
         border: none;
         border-radius: 4px;
         font-size: 1rem;
         padding: 0 1.5rem;
+        font-weight: bold;
       }
     `}</style>
   </nav>

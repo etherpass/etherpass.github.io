@@ -18,7 +18,7 @@ export default () => (
           position: sticky;
           top: 0;
           width: 100%;
-          max-width: 90rem;
+          max-width: 100%;
           background: #fff;
           z-index: 2;
           display: flex;

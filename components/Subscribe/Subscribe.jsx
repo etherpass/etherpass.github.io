@@ -1,16 +1,16 @@
+import {NavHeader, Section} from '../../atoms';
+
 export default () => (
-  <div>
-    <h2>Join token sale</h2>
+  <Section bg="#181818">
+    <NavHeader name="ico" color="white">
+      Join token sale
+    </NavHeader>
     <form>
-      <input type="email" />
+      <input type="email" placeholder="Email address" />
       <input type="submit" value="Get on the whitelist" />
     </form>
     <style jsx>
       {`
-        div {
-          background: #1452f5;
-          padding: 4rem 8.125rem;
-        }
         h2 {
           color: white;
           font-size: 1.875rem;
@@ -21,6 +21,7 @@ export default () => (
         }
         form {
           display: flex;
+          justify-content: center;
         }
         input {
           margin-right: 10px;
@@ -33,16 +34,15 @@ export default () => (
           width: 350px;
         }
         input[type='submit'] {
-          background-color: #fff;
-          color: #1452f5;
+          color: #fff;
+          background-color: #1452f5;
           border: none;
           border-radius: 4px;
           font-size: 1rem;
           padding: 0 1.5rem;
-          height: 60px;
-          font-weight: 600;
+          font-weight: bold;
         }
       `}
     </style>
-  </div>
+  </Section>
 );
