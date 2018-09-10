@@ -1,8 +1,9 @@
 import {NavHeader, Section} from '../../atoms';
+import theme from '../../theme';
 
 export default () => (
-  <Section bg="#181818">
-    <NavHeader name="ico" color="white">
+  <Section bg={theme.colors.secondary}>
+    <NavHeader name="ico" color={theme.colors.white}>
       Join token sale
     </NavHeader>
     <form>
@@ -11,14 +12,6 @@ export default () => (
     </form>
     <style jsx>
       {`
-        h2 {
-          color: white;
-          font-size: 1.875rem;
-          line-height: 2.5625rem;
-          text-align: left;
-          margin: 0;
-          margin-bottom: 0.875rem;
-        }
         form {
           display: flex;
           justify-content: center;
@@ -35,7 +28,7 @@ export default () => (
         }
         input[type='submit'] {
           color: #fff;
-          background-color: #1452f5;
+          background-color: ${theme.colors.primary};
           border: none;
           border-radius: 4px;
           font-size: 1rem;

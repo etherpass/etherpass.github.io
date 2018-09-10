@@ -1,4 +1,4 @@
-export default ({size = 8, bg = '#1452f5', children}) => (
+export default ({size = 8, bg, children}) => (
   <div>
     {children}
     <style jsx>{`

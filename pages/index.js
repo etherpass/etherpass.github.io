@@ -6,6 +6,7 @@ import {Footer} from '../components/Footer';
 import {Subscribe} from '../components/Subscribe';
 import {Team} from '../components/Team';
 import {Roadmap} from '../components/Roadmap';
+import theme from '../theme';
 
 export default () => (
   <div>
@@ -28,12 +29,12 @@ export default () => (
         -webkit-font-smoothing: antialiased;
       }
       body {
-        background: white;
+        background: ${theme.colors.white};
         font-family: 'Lato', sans-serif;
         font-weight: 400;
         font-size: 1.125rem;
         line-height: 2.125rem;
-        color: #3d5066;
+        color: ${theme.colors.text};
         padding: 0;
         margin: 0;
       }
@@ -46,7 +47,7 @@ export default () => (
       h2,
       h3 {
         font-family: 'Lato', sans-serif;
-        color: #1f2533;
+        color: ${theme.colors.secondary};
         margin: 0;
         padding: 0;
       }

@@ -1,5 +1,5 @@
-export default ({bg = 'initial', children}) => (
-  <section>
+export default ({bg = 'initial', children, ...props}) => (
+  <section {...props}>
     {children}
     <style jsx>{`
       section {

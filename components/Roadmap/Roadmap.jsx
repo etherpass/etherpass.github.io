@@ -1,6 +1,6 @@
 import {Section, NavHeader} from '../../atoms';
-import {FiActivity} from 'react-icons/fi';
-import {FaCoins, FaServer} from 'react-icons/fa';
+import {FiBookOpen, FiBox, FiCompass} from 'react-icons/fi';
+import {FaCoins, FaServer, FaKey, FaWarehouse} from 'react-icons/fa';
 import Timeline from './Timeline';
 import TimelineItem from './TimelineItem';
 
@@ -12,7 +12,7 @@ export default () => (
         title="Whitepaper"
         desc="Prepare technical documentation."
         date="Q4 2018"
-        icon={<FaCoins color="white" />}
+        icon={<FiBookOpen color="white" />}
       />
       <TimelineItem
         title="Testnet launch"
@@ -30,25 +30,25 @@ export default () => (
         title="MVP"
         desc="Contracts + desktop client."
         date="Q3 2019"
-        icon={<FiActivity color="white" />}
+        icon={<FiBox color="white" />}
       />
       <TimelineItem
         title="Full-fledged apps ecosystem"
         desc="Browser extensions, mobile apps."
         date="Q4 2019"
-        icon={<FiActivity color="white" />}
+        icon={<FiCompass color="white" />}
       />
       <TimelineItem
         title="PKDI"
         desc="Private key distribution infrastructure."
         date="Q1 2020"
-        icon={<FiActivity color="white" />}
+        icon={<FaKey color="white" />}
       />
       <TimelineItem
         title="Passchain"
         desc="Opinionated secure storage powered by Distributed Ledger Technology (DLT)."
         date="Q1 2021"
-        icon={<FiActivity color="white" />}
+        icon={<FaWarehouse color="white" />}
       />
     </Timeline>
   </Section>

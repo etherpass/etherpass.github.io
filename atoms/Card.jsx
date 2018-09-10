@@ -1,10 +1,11 @@
-export default ({title, src, children}) => (
+export default ({title, src, bg, children}) => (
   <div>
     {src && <div />}
     <h3>{title}</h3>
     <p>{children}</p>
     <style jsx>{`
       div {
+        background: ${bg};
         border-radius: 4px;
         box-shadow: 0px 1px 3px 0px rgba(31, 37, 51, 0.2),
           0px 1px 1px 0px rgba(31, 37, 51, 0.14),

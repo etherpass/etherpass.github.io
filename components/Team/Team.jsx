@@ -1,4 +1,5 @@
 import {Section, Flex, Card, NavHeader} from '../../atoms';
+import theme from '../../theme';
 
 const team = [
   {
@@ -24,11 +25,11 @@ const team = [
 ];
 
 export default () => (
-  <Section bg="#fbfbfb">
+  <Section bg={theme.colors.gray}>
     <NavHeader name="team">Team</NavHeader>
     <Flex>
       {team.map(member => (
-        <Card title={member.name} src={member.src}>
+        <Card title={member.name} src={member.src} bg={theme.colors.white}>
           {member.bio}
         </Card>
       ))}

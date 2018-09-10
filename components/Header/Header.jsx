@@ -1,5 +1,5 @@
-import Nav from './Nav';
-import Logo from './Logo';
+import {Nav, Logo} from './';
+import theme from '../../theme';
 
 export default () => (
   <>
@@ -11,22 +11,20 @@ export default () => (
         <Nav />
       </div>
     </header>
-    <style jsx>
-      {`
-        header {
-          font-size: 1rem;
-          position: sticky;
-          top: 0;
-          width: 100%;
-          max-width: 100%;
-          background: #fff;
-          z-index: 2;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1.25rem 8.125rem 0.625rem;
-        }
-      `}
-    </style>
+    <style jsx>{`
+      header {
+        font-size: 1rem;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        background: ${theme.colors.white};
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 8.125rem 0.625rem;
+      }
+    `}</style>
   </>
 );

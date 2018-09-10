@@ -1,14 +1,15 @@
 import React from 'react';
 import {Section, Flex, Circle, NavHeader} from '../../atoms';
 import {FiDatabase, FiEyeOff, FiShare} from 'react-icons/fi';
+import theme from '../../theme';
 
 const Features = () => (
-  <Section bg="#fbfbfb">
+  <Section bg={theme.colors.gray}>
     <NavHeader name="why">Reinvent the way password managers work</NavHeader>
     <Flex align="top" justify="space-between">
       <div>
-        <Circle>
-          <FiDatabase color="white" size={48} />
+        <Circle bg={theme.colors.primary}>
+          <FiDatabase color={theme.colors.white} size={48} />
         </Circle>
         <h3>Reliable and immutable storage</h3>
         <p>
@@ -18,8 +19,8 @@ const Features = () => (
         </p>
       </div>
       <div>
-        <Circle>
-          <FiEyeOff color="white" size={48} />
+        <Circle bg={theme.colors.primary}>
+          <FiEyeOff color={theme.colors.white} size={48} />
         </Circle>
         <h3>Protected by end-2-end encryption</h3>
         <p>
@@ -28,8 +29,8 @@ const Features = () => (
         </p>
       </div>
       <div>
-        <Circle>
-          <FiShare color="white" size={48} />
+        <Circle bg={theme.colors.primary}>
+          <FiShare color={theme.colors.white} size={48} />
         </Circle>
         <h3>Synchronized by default</h3>
         <p>

@@ -1,4 +1,5 @@
 import {Flex, Circle} from '../../atoms';
+import theme from '../../theme';
 
 const alignToDir = align => (align === 'right' ? 'row-reverse' : 'row');
 
@@ -11,11 +12,14 @@ export default ({title, desc, date, icon, align = 'left'}) => (
       <p>{desc}</p>
     </div>
     <div>
-      <Circle size={4}>{icon}</Circle>
+      <Circle bg={theme.colors.primary} size={4}>
+        {icon}
+      </Circle>
     </div>
     <div>{date}</div>
     <style jsx>{`
       div:first-child {
+        background: ${theme.colors.white};
         border-radius: 4px;
         box-shadow: 0px 1px 3px 0px rgba(31, 37, 51, 0.2),
           0px 1px 1px 0px rgba(31, 37, 51, 0.14),

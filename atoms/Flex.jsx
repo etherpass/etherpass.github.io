@@ -3,9 +3,10 @@ export default ({
   justify = 'normal',
   dir = 'row',
   mb = 0,
-  children
+  children,
+  ...props
 }) => (
-  <div>
+  <div {...props}>
     {children}
     <style jsx>{`
       div {

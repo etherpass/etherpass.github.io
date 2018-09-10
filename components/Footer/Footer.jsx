@@ -1,4 +1,5 @@
 import {FiGithub, FiTwitter, FiSend} from 'react-icons/fi';
+import theme from '../../theme';
 
 export default () => (
   <footer>
@@ -10,17 +11,17 @@ export default () => (
         <ul>
           <li>
             <a href="https://t.me/etherpass_community">
-              <FiSend color="white" size={24} />
+              <FiSend color={theme.colors.white} size={24} />
             </a>
           </li>
           <li>
             <a href="https://github.com/etherpass">
-              <FiGithub color="white" size={24} />
+              <FiGithub color={theme.colors.white} size={24} />
             </a>
           </li>
           <li>
             <a href="https://twitter.com/etherpass_app">
-              <FiTwitter color="white" size={24} />
+              <FiTwitter color={theme.colors.white} size={24} />
             </a>
           </li>
         </ul>
@@ -28,8 +29,8 @@ export default () => (
     </div>
     <style jsx>{`
       footer {
-        color: #fff;
-        background-color: #181818;
+        color: ${theme.colors.white};
+        background-color: ${theme.colors.secondary};
         padding: 1.5rem 8.125rem;
         font-size: 1rem;
       }

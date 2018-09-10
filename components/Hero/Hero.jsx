@@ -1,10 +1,11 @@
 import React from 'react';
 import {FiCheck, FiGithub, FiSend, FiTwitter} from 'react-icons/fi';
 import {Section, List, Flex} from '../../atoms';
+import theme from '../../theme';
 
 const CheckIcon = () => (
   <FiCheck
-    color="#1452F5"
+    color={theme.colors.primary}
     size="24"
     style={{
       marginRight: '1rem'
@@ -13,7 +14,7 @@ const CheckIcon = () => (
 );
 
 export default () => (
-  <Section>
+  <Section style={{height: 'calc(100vh - 90px)'}}>
     <Flex align="center" justify="space-between">
       <div>
         <h1>
@@ -87,8 +88,8 @@ export default () => (
           display: flex;
           justify-content: center;
           align-items: center;
-          color: white;
-          background-color: #1f2533;
+          color: ${theme.colors.white};
+          background-color: ${theme.colors.secondary};
           border: none;
           border-radius: 50%;
           text-decoration: none;
