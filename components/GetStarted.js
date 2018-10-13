@@ -71,7 +71,7 @@ export default () => (
     <Wrapper>
       <Heading as="h2" color="black" fontSize={4} textAlign="center" mb={5}>
         <Link name="how" />
-        Get started in minutes
+        How it works
       </Heading>
       {steps.map((step, idx) => (
         <Step key={step.title} num={idx} {...step} />

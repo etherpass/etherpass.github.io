@@ -1,8 +1,13 @@
 import Wrapper from './Wrapper';
 import {Heading, Box, Flex, Card, Text, Link} from 'rebass';
 import {rem, triangle, rgba} from 'polished';
-import {FiBookOpen, FiBox, FiCompass} from 'react-icons/fi';
-import {FaCoins, FaServer, FaKey, FaWarehouse} from 'react-icons/fa';
+import {BookOpen} from 'styled-icons/fa-solid/BookOpen.cjs';
+import {BoxOpen} from 'styled-icons/fa-solid/BoxOpen.cjs';
+import {Compass} from 'styled-icons/fa-solid/Compass.cjs';
+import {Coins} from 'styled-icons/fa-solid/Coins.cjs';
+import {Server} from 'styled-icons/fa-solid/Server.cjs';
+import {Key} from 'styled-icons/fa-solid/Key.cjs';
+import {Warehouse} from 'styled-icons/fa-solid/Warehouse.cjs';
 import theme from '../theme';
 
 const alignToDir = align => (align === 'right' ? 'row-reverse' : 'row');
@@ -83,11 +88,11 @@ const TimelineItem = ({title, desc, date, icon, align = 'left'}) => (
       color="white"
       size={64}
       m={[0, 4]}
-      pt={2}
+      pt={1}
       css={{zIndex: 1}}
       width={[0, 64]}
     >
-      {icon}
+      {React.cloneElement(icon, {style: {verticAlAlign: 'middle'}})}
     </Circle>
     <Box width={[1 / 3]}>
       <Text fontWeight="bold" textAlign={['left', align]}>
@@ -109,46 +114,46 @@ export default () => (
           title="Whitepaper"
           desc="Prepare technical documentation."
           date="Q4 2018"
-          icon={<FiBookOpen size={32} />}
+          icon={<BookOpen size={32} />}
         />
         <TimelineItem
           title="Testnet launch"
           desc="Alpha version of smart contracts. Initial launch on the blockchain testnet."
           date="Q1 2019"
-          icon={<FaServer size={32} />}
+          icon={<Server size={32} />}
           align="right"
         />
         <TimelineItem
           title="ICO"
           desc="Company registration, legal activities."
           date="Q2 2019"
-          icon={<FaCoins size={32} />}
+          icon={<Coins size={32} />}
         />
         <TimelineItem
           title="MVP"
           desc="Contracts + desktop client."
           date="Q3 2019"
-          icon={<FiBox size={32} />}
+          icon={<BoxOpen size={32} />}
           align="right"
         />
         <TimelineItem
           title="Full-fledged apps ecosystem"
           desc="Browser extensions, mobile apps."
           date="Q4 2019"
-          icon={<FiCompass size={32} />}
+          icon={<Compass size={32} />}
         />
         <TimelineItem
           title="PKDI"
           desc="Private key distribution infrastructure."
           date="Q1 2020"
-          icon={<FaKey size={32} />}
+          icon={<Key size={32} />}
           align="right"
         />
         <TimelineItem
           title="Passchain"
           desc="Opinionated secure storage powered by Distributed Ledger Technology (DLT)."
           date="Q1 2021"
-          icon={<FaWarehouse size={32} />}
+          icon={<Warehouse size={32} />}
         />
       </Timeline>
     </Wrapper>

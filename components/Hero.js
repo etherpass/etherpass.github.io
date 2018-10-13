@@ -1,32 +1,35 @@
 import React from 'react';
-import {Box, Flex, Heading, Image, Link} from 'rebass';
-import styled from 'styled-components';
+import {Box, Flex, Heading, Image, Link, Text} from 'rebass';
 import Wrapper from './Wrapper';
-import {FiCheck} from 'react-icons/fi';
-import {rem, margin} from 'polished';
-import {IconContext} from 'react-icons';
 import GithubIcon from 'super-tiny-icons/images/svg/github.svg';
 import TelegramIcon from 'super-tiny-icons/images/svg/telegram.svg';
 import TwitterIcon from 'super-tiny-icons/images/svg/twitter.svg';
+import {Check} from 'styled-icons/fa-solid/Check.cjs';
 
-const List = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`;
+const List = props => (
+  <Box
+    m={0}
+    p={0}
+    css={{
+      listStyleType: 'none'
+    }}
+    {...props}
+  />
+);
 
-const ListItem = styled.li`
-  ${margin(0, 0, rem(8), 0)};
-  vertical-align: middle;
-  :last-of-type {
-    ${margin(0)};
-  }
-`;
+const ListItem = ({children, ...props}) => (
+  <Box as="li" mr={3} mb={3} {...props}>
+    <Text as="i" color="blue" mr={3} css={{verticalAlign: 'middle'}}>
+      <Check size={22} />
+    </Text>
+    {children}
+  </Box>
+);
 
 export const Social = ({Icon, href = '/', children}) => (
   <Box mr={3}>
     <Link href={href} target="_blank" rel="noopener">
-      <Icon height={28} />
+      <Icon height={32} />
       {children}
     </Link>
   </Box>
@@ -46,27 +49,11 @@ export default () => (
           The most trusted password manager
         </Heading>
         <Box mb={4}>
-          <IconContext.Provider
-            value={{
-              size: 24,
-              style: {marginRight: rem(16), verticalAlign: 'middle'}
-            }}
-          >
-            <List>
-              <ListItem>
-                <FiCheck />
-                Blockchain-powered password vault
-              </ListItem>
-              <ListItem>
-                <FiCheck />
-                Trustless access to your data
-              </ListItem>
-              <ListItem>
-                <FiCheck />
-                Synchronized at no cost
-              </ListItem>
-            </List>
-          </IconContext.Provider>
+          <List>
+            <ListItem>Blockchain-powered password vault</ListItem>
+            <ListItem>Trustless access to your data</ListItem>
+            <ListItem>Synchronized at no cost</ListItem>
+          </List>
         </Box>
         <Flex>
           <Social Icon={TelegramIcon} href="https://t.me/etherpass_community" />

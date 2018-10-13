@@ -1,6 +1,8 @@
 import {Box, Card, Heading, Flex, Text, Link} from 'rebass';
 import Wrapper from './Wrapper';
-import {FiDatabase, FiEyeOff, FiShare} from 'react-icons/fi';
+import {ShieldAlt} from 'styled-icons/fa-solid/ShieldAlt.cjs';
+import {UserSecret} from 'styled-icons/fa-solid/UserSecret.cjs';
+import {Backup} from 'styled-icons/material/Backup.cjs';
 
 const createFeature = (name, desc, icon) => ({
   name,
@@ -12,17 +14,17 @@ const features = [
   createFeature(
     'Blockchain reliability',
     'The nature of blockchain implies that blocks are immutable at a given moment in time, meaning you can retrieve your password from any point in past',
-    FiDatabase
+    ShieldAlt
   ),
   createFeature(
     'End-to-end encryption',
     'The nature of blockchain implies that blocks are immutable at a given moment in time, meaning you can retrieve your password from any point in past',
-    FiShare
+    UserSecret
   ),
   createFeature(
-    'Disaster recovery ready',
+    'Disaster recovery',
     'The nature of blockchain implies that blocks are immutable at a given moment in time, meaning you can retrieve your password from any point in past',
-    FiEyeOff
+    Backup
   )
 ];
 

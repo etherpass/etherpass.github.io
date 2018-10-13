@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import {Flex, Heading, Box, Link as ReLink, Text} from 'rebass';
 import {headingFont} from '../theme';
-import {FiAlignJustify} from 'react-icons/fi';
+import {AlignJustify} from 'styled-icons/fa-solid/AlignJustify.cjs';
 import styled from 'styled-components';
 import {cover} from 'polished';
 
@@ -68,11 +68,11 @@ class Hamburger extends React.Component {
     return (
       <>
         <HamburgerIcon>
-          <FiAlignJustify size={32} onClick={this.handleToggle} />
+          <AlignJustify size={32} onClick={this.handleToggle} />
           {this.state.show && (
             <Fit bg="white" onClick={this.handleHide}>
               <HamburgerItem href="#why">Why</HamburgerItem>
-              <HamburgerItem href="#how">Features</HamburgerItem>
+              <HamburgerItem href="#how">How it works</HamburgerItem>
               <HamburgerItem href="#team">Team</HamburgerItem>
               <HamburgerItem href="#roadmap">Roadmap</HamburgerItem>
               <HamburgerItem href="#subscribe">Subscribe</HamburgerItem>
