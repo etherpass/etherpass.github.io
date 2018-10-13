@@ -1,20 +1,21 @@
 {
-  "name": "etherpass-next",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "create-next-example-app",
   "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "build": "next build"
+    "dev": "next -p $PORT",
+    "build": "next build",
+    "start": "next start"
   },
-  "keywords": [],
-  "author": "optimusway <optimusway@gmail.com> (https://github.com/optimusway)",
-  "license": "ISC",
   "dependencies": {
-    "next": "^6.1.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-icons": "^3.0.5"
+    "next": "^7.0.0",
+    "polished": "^2.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-icons": "^3.1.0",
+    "rebass": "^3.0.0-9",
+    "styled-components": "^4.0.0-beta.9",
+    "super-tiny-icons": "^0.1.5"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^0.5.4"
   }
 }
