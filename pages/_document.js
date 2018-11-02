@@ -14,10 +14,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head>
-          <title>Etherpass – Most trusted password manager</title>
-          {this.props.styleTags}
-        </Head>
+        <Head>{this.props.styleTags}</Head>
         <body>
           <Main />
           <NextScript />

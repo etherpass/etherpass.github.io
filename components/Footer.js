@@ -5,10 +5,11 @@ import {Circle} from './Roadmap';
 import {TelegramPlane as Telegram} from 'styled-icons/fa-brands/TelegramPlane.cjs';
 import {Github} from 'styled-icons/fa-brands/Github.cjs';
 import {Twitter} from 'styled-icons/fa-brands/Twitter.cjs';
+import {colors} from '../theme';
 
-const Social = ({Icon, href}) => (
+export const Social = ({Icon, href}) => (
   <Circle mr={3}>
-    <Link href={href}>
+    <Link href={href} color={colors.primary}>
       <Icon size={32} />
     </Link>
   </Circle>

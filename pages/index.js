@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 import Nav from '../components/Nav';
 import Subscribe from '../components/Subscribe';
 import Features from '../components/Features';
-import GetStarted from '../components/GetStarted';
+import How from '../components/How';
 import Team from '../components/Team';
 import Roadmap from '../components/Roadmap';
 import Footer from '../components/Footer';
@@ -21,7 +21,7 @@ const Home = () => (
       value="Subscribe"
     />
     <Features />
-    <GetStarted />
+    <How />
     <Team />
     <Roadmap />
     <Subscribe

@@ -2,13 +2,13 @@ import {Box, Heading, Flex, Button, Link} from 'rebass';
 import styled from 'styled-components';
 import {rem, border} from 'polished';
 import theme from '../theme';
+import SectionTitle from './SectionTitle';
 
 const EmailInput = styled.input`
   ${border('1px', 'solid', theme.colors.gray)};
   border-radius: 4px;
   padding: ${rem(16)};
   outline: none;
-  /* min-width: 150px; */
 `;
 
 export const Form = ({placeholder, value}) => (
@@ -32,10 +32,9 @@ export default ({title, href, ...formProps}) => (
       justifyContent="center"
       flexDirection={['column', 'row']}
     >
-      <Heading as="h2" color="white" mr={3} mb={[4, 0]} textAlign="center">
-        {href && <Link name={href} />}
+      <SectionTitle href={href} color="white" mr={3} mb={[4, 0]}>
         {title}
-      </Heading>
+      </SectionTitle>
       <Form {...formProps} />
     </Flex>
   </Box>

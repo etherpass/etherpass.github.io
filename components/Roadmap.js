@@ -8,7 +8,8 @@ import {Coins} from 'styled-icons/fa-solid/Coins.cjs';
 import {Server} from 'styled-icons/fa-solid/Server.cjs';
 import {Key} from 'styled-icons/fa-solid/Key.cjs';
 import {Warehouse} from 'styled-icons/fa-solid/Warehouse.cjs';
-import theme from '../theme';
+import theme, {colors} from '../theme';
+import SectionTitle from './SectionTitle';
 
 const alignToDir = align => (align === 'right' ? 'row-reverse' : 'row');
 const reverseAlign = align => (align === 'right' ? 'left' : 'right');
@@ -28,24 +29,7 @@ export const Circle = ({size = 32, css, ...props}) => (
   />
 );
 
-const Timeline = props => (
-  <Box
-    {...props}
-    css={{
-      position: 'relative',
-      '&::before': {
-        content: "''",
-        position: 'absolute',
-        top: 0,
-        left: 'calc(50% - 2px)',
-        height: '100%',
-        width: '4px',
-        background: theme.colors.blue,
-        zIndex: 0
-      }
-    }}
-  />
-);
+const Timeline = props => <Box {...props} />;
 
 const TimelineItem = ({title, desc, date, icon, align = 'left'}) => (
   <Flex
@@ -63,19 +47,19 @@ const TimelineItem = ({title, desc, date, icon, align = 'left'}) => (
       width={[2 / 3, 1 / 3]}
       css={{
         position: 'relative',
-        zIndex: 2,
-        '&::after': {
-          content: "''",
-          position: 'absolute',
-          [reverseAlign(align)]: '-16px',
-          top: 'calc(50% - 8px)',
-          ...triangle({
-            pointingDirection: reverseAlign(align),
-            width: 16,
-            height: 16,
-            foregroundColor: rgba(0, 0, 0, 0.125)
-          })
-        }
+        zIndex: 2
+        // '&::after': {
+        //   content: "''",
+        //   position: 'absolute',
+        //   [reverseAlign(align)]: '-16px',
+        //   top: 'calc(50% - 8px)',
+        //   ...triangle({
+        //     pointingDirection: reverseAlign(align),
+        //     width: 16,
+        //     height: 16,
+        //     foregroundColor: rgba(0, 0, 0, 0.125)
+        //   })
+        // }
       }}
     >
       <Text fontWeight="bold" mb={2}>
@@ -84,7 +68,7 @@ const TimelineItem = ({title, desc, date, icon, align = 'left'}) => (
       <Text>{desc}</Text>
     </Card>
     <Circle
-      bg="blue"
+      bg={colors.primary}
       color="white"
       size={64}
       m={[0, 4]}
@@ -105,11 +89,20 @@ const TimelineItem = ({title, desc, date, icon, align = 'left'}) => (
 export default () => (
   <Box bg="lightgray" py={5}>
     <Wrapper>
-      <Heading as="h2" textAlign="center" fontSize={4} mb={5}>
-        <Link name="roadmap" />
+      <SectionTitle href="roadmap" mb={5}>
         Roadmap
-      </Heading>
-      <Timeline>
+      </SectionTitle>
+      <Timeline css={{position: 'relative'}}>
+        <Box
+          width={[0, 4]}
+          css={{
+            position: 'absolute',
+            height: '100%',
+            left: 'calc(50% - 2px)',
+            background: colors.primary,
+            zIndex: 0
+          }}
+        />
         <TimelineItem
           title="Whitepaper"
           desc="Prepare technical documentation."

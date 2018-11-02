@@ -1,5 +1,5 @@
 {
-  "name": "create-next-example-app",
+  "name": "etherpass-www",
   "scripts": {
     "dev": "next -p $PORT",
     "build": "next build",

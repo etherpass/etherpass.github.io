@@ -1,45 +1,63 @@
-import {Box, Card, Heading, Flex, Text, Link} from 'rebass';
+import {Box, Card, Heading, Flex, Text, Image} from 'rebass';
 import Wrapper from './Wrapper';
-import {ShieldAlt} from 'styled-icons/fa-solid/ShieldAlt.cjs';
-import {UserSecret} from 'styled-icons/fa-solid/UserSecret.cjs';
-import {Backup} from 'styled-icons/material/Backup.cjs';
+import SectionTitle from './SectionTitle';
+import {colors} from '../theme';
 
-const createFeature = (name, desc, icon) => ({
+const createFeature = (name, desc, image) => ({
   name,
   desc,
-  icon
+  image
 });
 
 const features = [
   createFeature(
     'Blockchain reliability',
-    'The nature of blockchain implies that blocks are immutable at a given moment in time, meaning you can retrieve your password from any point in past',
-    ShieldAlt
+    'Leverage the password security with the blockchain reliability, immutability and auto-synchronization.',
+    '../static/undraw_server_status_5pbv.svg'
   ),
   createFeature(
     'End-to-end encryption',
-    'The nature of blockchain implies that blocks are immutable at a given moment in time, meaning you can retrieve your password from any point in past',
-    UserSecret
+    'Zero-knowledge proof with the end-2-end encryptions guarantees only you can access your data.',
+    '../static/undraw_security_o890.svg'
   ),
   createFeature(
-    'Disaster recovery',
-    'The nature of blockchain implies that blocks are immutable at a given moment in time, meaning you can retrieve your password from any point in past',
-    Backup
+    'Fail-operational',
+    'Etherpass services will be operational even in a case of total disaster meaning your never lost your data.',
+    '../static/undraw_QA_engineers_dg5p.svg'
   )
 ];
 
-const Pillar = ({title, content, Icon, ...props}) => (
+const Pillar = ({title, content, image, ...props}) => (
   <Card
-    boxShadow={['small', 'small', 'large']}
+    boxShadow={['small', 'small', 'large', 'xl']}
     borderRadius={4}
     p={2}
     mb={[4, 0]}
     {...props}
   >
     <Box my={4} css={{textAlign: 'center'}}>
-      <Icon size={48} />
+      <Image src={image} height={200} />
     </Box>
-    <Heading as="h3" fontSize={3} mb={4} textAlign="center">
+    <Heading
+      as="h3"
+      fontSize={3}
+      mb={4}
+      textAlign="center"
+      css={{
+        position: 'relative',
+        '&:after': {
+          content: "''",
+          position: 'absolute',
+          height: '1px',
+          width: '20%',
+          bottom: '-0.6em',
+          right: 0,
+          left: 0,
+          margin: '0 auto',
+          backgroundColor: colors.dark
+        }
+      }}
+    >
       {title}
     </Heading>
     <Text px={3} pb={4} mb={[3, 0]} textAlign="justify">
@@ -50,20 +68,26 @@ const Pillar = ({title, content, Icon, ...props}) => (
 
 export default () => (
   <Wrapper>
-    <Heading as="h2" fontSize={4} textAlign="center" mt={5} mb={4}>
-      <Link name="why" />
+    <SectionTitle href="why" mt={5} mb={4}>
       Why Etherpass
+    </SectionTitle>
+    <Heading
+      textAlign="center"
+      as="h4"
+      color="#636e72"
+      fontSize={20}
+      fontWeight="200"
+      my={4}
+    >
+      Etherpass is the perfect place for your most sensitive data.
     </Heading>
-    <Text color="text" fontSize={3} textAlign="center" mb={5}>
-      Leverage the password security with the blockchain
-    </Text>
     <Flex justifyContent="space-between" flexWrap="wrap" px={3}>
-      {features.map(({name, desc, icon}) => (
+      {features.map(({name, desc, image}) => (
         <Pillar
           key={name}
           title={name}
           content={desc}
-          Icon={icon}
+          image={image}
           width={[1, 0.32]}
         />
       ))}

@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import {Flex, Heading, Box, Link as ReLink, Text} from 'rebass';
-import {headingFont} from '../theme';
+import {Flex, Heading, Box, Link as ReLink, Text, Button} from 'rebass';
+import {fonts, colors} from '../theme';
 import {AlignJustify} from 'styled-icons/fa-solid/AlignJustify.cjs';
 import styled from 'styled-components';
 import {cover} from 'polished';
+import Wrapper from './Wrapper';
 
 const breakpoints = {
   tablet: '768px',
@@ -103,38 +104,40 @@ const NavItem = props => (
     {...props}
     css={{
       ...props.css,
-      fontFamily: headingFont,
+      fontFamily: fonts.headingFont,
       textDecoration: 'none'
     }}
   />
 );
 
 export default () => (
-  <Flex
-    alignItems="center"
+  <Box
     bg="white"
-    px={3}
-    py={2}
-    css={{position: 'fixed', top: '0', left: 0, right: 0, zIndex: 99}}
+    css={{
+      position: 'fixed',
+      top: '0',
+      left: 0,
+      right: 0,
+      zIndex: 99
+    }}
   >
-    <Logo />
-    <Box mx="auto" />
-    <NavMenu alignItems="center">
-      <NavItem href="#why">Why Etherpass</NavItem>
-      <NavItem href="#how">How it works</NavItem>
-      <NavItem href="#team">Team</NavItem>
-      <NavItem href="#roadmap">Roadmap</NavItem>
-      <NavItem
-        href="#subscribe"
-        bg="blue"
-        color="white"
-        p={3}
-        mr={0}
-        css={{borderRadius: '4px', boxShadow: '0 8px 16px rgba(0,0,0,0.075)'}}
-      >
-        Join the waitlist
-      </NavItem>
-    </NavMenu>
-    <Hamburger />
-  </Flex>
+    <Wrapper>
+      <Flex alignItems="center" px={3} py={2}>
+        <Logo />
+        <Box mx="auto" />
+        <NavMenu alignItems="center">
+          <NavItem href="#why">Why Etherpass</NavItem>
+          <NavItem href="#how">How it works</NavItem>
+          <NavItem href="#team">Team</NavItem>
+          <NavItem href="#roadmap">Roadmap</NavItem>
+          <NavItem href="#subscribe" mr={0} pr={0}>
+            <Button variant="primary" css={{height: '52px'}}>
+              Join the waitlist
+            </Button>
+          </NavItem>
+        </NavMenu>
+        <Hamburger />
+      </Flex>
+    </Wrapper>
+  </Box>
 );
