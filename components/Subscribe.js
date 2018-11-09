@@ -43,6 +43,9 @@ const MailchimpForm = styled(({placeholder, className}) => (
               name="subscribe"
               id="mc-embedded-subscribe"
               className="button"
+              onClick={() => {
+                window.analytics.track('Subscribed');
+              }}
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Document, {Head, Main, NextScript} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
+import Segment from '../components/Segment';
 
 export default class MyDocument extends Document {
   static getInitialProps({renderPage}) {
@@ -25,6 +26,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Segment writeKey="zPpyFcjlzWuZNWPCoAMCRGZCmRsLqv5J" />
         </body>
       </html>
     );
