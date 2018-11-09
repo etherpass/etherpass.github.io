@@ -2,6 +2,7 @@ import {Box, Flex} from 'rebass';
 import SectionTitle from './SectionTitle';
 import styled from 'styled-components';
 import {colors} from '../theme';
+import {track} from './Segment';
 
 const MailchimpForm = styled(({placeholder, className}) => (
   <Box className={className}>
@@ -44,7 +45,7 @@ const MailchimpForm = styled(({placeholder, className}) => (
               id="mc-embedded-subscribe"
               className="button"
               onClick={() => {
-                window.analytics.track('Subscribed');
+                track('Subscribed');
               }}
             />
           </div>

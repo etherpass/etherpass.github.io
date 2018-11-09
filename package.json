@@ -1,7 +1,7 @@
 {
   "name": "etherpass-www",
   "scripts": {
-    "dev": "next -p $PORT",
+    "dev": "NODE_ENV=production next -p $PORT",
     "build": "next build",
     "start": "next start"
   },

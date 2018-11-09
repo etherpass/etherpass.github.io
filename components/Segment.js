@@ -1,3 +1,17 @@
+const shouldTrack = () => process.env.NODE_ENV === 'production';
+
+export const page = () => {
+  shouldTrack() && window.analytics.page();
+};
+
+export const identify = () => {
+  shouldTrack() && window.analytics.identify();
+};
+
+export const track = (event, opts) => {
+  shouldTrack() && window.analytics.track(event, opts);
+};
+
 const addSegment = key => ({
   __html: `
 <script>
@@ -8,6 +22,5 @@ const addSegment = key => ({
 `
 });
 
-export default ({writeKey}) => (
-  <div dangerouslySetInnerHTML={addSegment(writeKey)} />
-);
+export default ({writeKey}) =>
+  shouldTrack() && <div dangerouslySetInnerHTML={addSegment(writeKey)} />;

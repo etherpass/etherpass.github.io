@@ -10,11 +10,12 @@ import Team from '../components/Team';
 import Roadmap from '../components/Roadmap';
 import Footer from '../components/Footer';
 import theme from '../theme';
+import {identify, page} from '../components/Segment';
 
 class Home extends Component {
   componentDidMount() {
-    window.analytics.identify();
-    window.analytics.page();
+    identify();
+    page();
   }
 
   render() {
