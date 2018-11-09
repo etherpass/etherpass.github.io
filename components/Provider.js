@@ -4,26 +4,27 @@ import {normalize} from 'polished';
 import theme from '../theme';
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato');  
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,700|PT+Sans:700');  
   
   ${normalize()};
 
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
 
   body {
     color: ${theme.colors.text};
-    font-family: 'Open Sans', 'Lato', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
     -webkit-overflow-scrolling: touch;
     line-height: 1.6;
   }
 
-  div > h2> a::after {
+  div > h2 > a::after {
     content: '';
     display: block;
     height: 120px;
@@ -31,11 +32,11 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export default props => (
+export default ({theme, children}) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyles />
-      {props.children}
+      {children}
     </>
   </ThemeProvider>
 );

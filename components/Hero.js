@@ -6,10 +6,10 @@ import TelegramIcon from 'super-tiny-icons/images/svg/telegram.svg';
 import TwitterIcon from 'super-tiny-icons/images/svg/twitter.svg';
 import {Check} from 'styled-icons/fa-solid/Check.cjs';
 import {colors} from '../theme';
-import {lighten} from 'polished';
 
 const List = props => (
   <Box
+    as="ul"
     m={0}
     p={0}
     css={{
@@ -20,9 +20,9 @@ const List = props => (
 );
 
 const ListItem = ({children, ...props}) => (
-  <Box as="li" mr={3} mb={3} {...props}>
-    <Text as="i" color={colors.primary} mr={3} css={{verticalAlign: 'top'}}>
-      <Check size={22} />
+  <Box as="li" mr={3} mb={2} {...props}>
+    <Text as="i" color={colors.primary} mr={3} css={{verticalAlign: 'middle'}}>
+      <Check size={20} />
     </Text>
     {children}
   </Box>
@@ -48,24 +48,18 @@ export default () => (
     >
       <Box width={[1, 0.4]} mb={[5, 0]}>
         <Heading as="h1" color="black" fontSize={5} mb={4}>
-          The most trusted password vault
+          The most trusted password manager
         </Heading>
         <Box mb={4}>
-          <Heading
-            as="h4"
-            color="#636e72"
-            fontSize={20}
-            fontWeight="200"
-            mb={4}
-          >
+          {/* <Text color="#5C6F84" fontSize={20} mb={4}>
             Safely store and secure your passwords, tokens and private keys in a
             fail-operational vault with zero-knowledge access.
-          </Heading>
-          {/* <List>
+          </Text> */}
+          <List>
             <ListItem>Decentralized by default</ListItem>
             <ListItem>Zero-knowledge privacy</ListItem>
             <ListItem>Fail-operational by design</ListItem>
-          </List> */}
+          </List>
         </Box>
         <Flex>
           <Social Icon={TelegramIcon} href="https://t.me/etherpass_community" />

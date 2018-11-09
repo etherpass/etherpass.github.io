@@ -68,19 +68,12 @@ const Pillar = ({title, content, image, ...props}) => (
 
 export default () => (
   <Wrapper>
-    <SectionTitle href="why" mt={5} mb={4}>
+    <SectionTitle href="why" mt={5} mb={3}>
       Why Etherpass
     </SectionTitle>
-    <Heading
-      textAlign="center"
-      as="h4"
-      color="#636e72"
-      fontSize={20}
-      fontWeight="200"
-      my={4}
-    >
-      Etherpass is the perfect place for your most sensitive data.
-    </Heading>
+    <Text color="#5C6F84" fontSize={3} textAlign="center" mb={4}>
+      Perfect place to store your mission-critical data.
+    </Text>
     <Flex justifyContent="space-between" flexWrap="wrap" px={3}>
       {features.map(({name, desc, image}) => (
         <Pillar

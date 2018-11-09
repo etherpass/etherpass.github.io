@@ -1,3 +1,3 @@
 import {Box} from 'rebass';
 
-export default props => <Box css={{maxWidth: '1200px'}} mx="auto" {...props} />;
+export default props => <Box css={{maxWidth: '1128px'}} mx="auto" {...props} />;

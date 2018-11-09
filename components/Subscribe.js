@@ -11,19 +11,38 @@ const EmailInput = styled.input`
   outline: none;
 `;
 
-export const Form = ({placeholder, value}) => (
-  <Flex as="form" flexWrap="wrap">
-    <EmailInput
-      type="email"
-      name="email"
-      id="email"
-      placeholder={placeholder}
-    />
-    <Button ml={2} variant="primary">
-      {value}
-    </Button>
-  </Flex>
-);
+export class Form extends React.Component {
+  state = {
+    email: ''
+  };
+
+  handleChangeEmail = e => this.setState({email: e.target.value});
+
+  render() {
+    const {placeholder, value} = this.props;
+    return (
+      <Flex flexWrap="wrap">
+        <EmailInput
+          type="email"
+          name="email"
+          id="email"
+          placeholder={placeholder}
+          value={this.state.email}
+          onChange={this.handleChangeEmail}
+        />
+        <Button
+          ml={2}
+          variant="primary"
+          onClick={e => {
+            e.preventDefault();
+          }}
+        >
+          {value}
+        </Button>
+      </Flex>
+    );
+  }
+}
 
 export default ({title, href, ...formProps}) => (
   <Box bg="black" color="white" py={5}>

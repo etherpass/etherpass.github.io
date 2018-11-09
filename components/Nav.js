@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {Flex, Heading, Box, Link as ReLink, Text, Button} from 'rebass';
-import {fonts, colors} from '../theme';
+import theme, {fonts, colors} from '../theme';
 import {AlignJustify} from 'styled-icons/fa-solid/AlignJustify.cjs';
 import styled from 'styled-components';
 import {cover} from 'polished';
@@ -87,12 +87,14 @@ class Hamburger extends React.Component {
 
 const Logo = () => (
   <Link href="/">
-    <Heading as="h1" color="black">
-      <Text as="span" fontWeight="normal">
+    <Box fontSize={4}>
+      <Text as="span" bg={colors.primary} color="white" p={2}>
         ether
       </Text>
-      <Text as="span">pass</Text>
-    </Heading>
+      <Text as="span" color="primary">
+        pass
+      </Text>
+    </Box>
   </Link>
 );
 
@@ -101,12 +103,10 @@ const NavItem = props => (
     color="black"
     m={2}
     p={2}
-    {...props}
     css={{
-      ...props.css,
-      fontFamily: fonts.headingFont,
       textDecoration: 'none'
     }}
+    {...props}
   />
 );
 

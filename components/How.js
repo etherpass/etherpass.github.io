@@ -26,35 +26,47 @@ const steps = [
   )
 ];
 
-const Step = ({title, content, image, dir}) => (
-  <Flex alignItems="center" flexWrap="wrap" flexDirection={dir} mb={4} px={3}>
-    <Box width={[1, 1 / 3]} mb={[3, 0]}>
-      <Image src={image} />
-    </Box>
-    <Box width={[1, 2 / 3]} px={[2, 5]}>
-      <Heading
-        as="h3"
-        color="black"
-        fontSize={3}
-        my={2}
-        css={{display: 'inline-block'}}
-      >
-        {title}
-      </Heading>
-      <Text mb={[3, 0]}>{content}</Text>
-    </Box>
-  </Flex>
-);
+export default class How extends React.Component {
+  state = {
+    selectedIndex: 0
+  };
 
-export default () => (
-  <Box bg="lightgray" my={5} py={5}>
-    <Wrapper>
-      <SectionTitle href="how" mb={5}>
-        How it works
-      </SectionTitle>
-      {steps.map(step => (
-        <Step key={`step-${step.title}`} {...step} />
-      ))}
-    </Wrapper>
-  </Box>
-);
+  render() {
+    return (
+      <Box bg="lightgray" my={5} py={5}>
+        <Wrapper>
+          <SectionTitle href="how" mb={5}>
+            How it works
+          </SectionTitle>
+          <Flex justifyContent="space-between" flexWrap="wrap" mb={4} px={3}>
+            <Box width={[1, 1 / 2]}>
+              {steps.map((step, idx) => (
+                <Box
+                  key={`step-${step.title.toLowerCase()}`}
+                  mb={4}
+                  p={3}
+                  bg={idx === this.state.selectedIndex ? 'white' : ''}
+                  css={{cursor: 'pointer', borderRadius: '4px'}}
+                  onClick={() => {
+                    this.setState({selectedIndex: idx});
+                  }}
+                >
+                  <Heading as="h3" fontSize={3} my={2}>
+                    {step.title}
+                  </Heading>
+                  <Text mb={[3, 0]}>{step.content}</Text>
+                </Box>
+              ))}
+            </Box>
+            <Image
+              src={steps[this.state.selectedIndex].image}
+              pl={[0, 5]}
+              height={450}
+              width={[1, 1 / 2]}
+            />
+          </Flex>
+        </Wrapper>
+      </Box>
+    );
+  }
+}

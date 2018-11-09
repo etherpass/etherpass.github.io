@@ -9,9 +9,10 @@ import How from '../components/How';
 import Team from '../components/Team';
 import Roadmap from '../components/Roadmap';
 import Footer from '../components/Footer';
+import theme from '../theme';
 
 const Home = () => (
-  <Provider>
+  <Provider theme={theme}>
     <Head title="Etherpass – Most trusted password manager" />
     <Nav />
     <Hero />

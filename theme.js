@@ -6,7 +6,7 @@ export const colors = {
 };
 
 export const fonts = {
-  heading: 'Open Sans, -apple-system, BlinkMacSystemFont, Helvetica, sans-serif'
+  heading: 'PT Sans, -apple-system, BlinkMacSystemFont, Helvetica, sans-serif'
 };
 
 export default {
