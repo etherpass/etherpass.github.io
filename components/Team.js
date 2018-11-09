@@ -19,7 +19,7 @@ const team = [
   },
   {
     name: `Artyom Neustroev`,
-    bio: `5+ years experience in Web development. Trying to make frontend developers happier bringing the brilliant devops solutions in the last 2 years.`,
+    bio: `5+ years experience in Web development. Making frontend developers happier bringing the brilliant devops solutions in the last 2 years.`,
     src: `https://github.com/neustroev`,
     role: 'Frontend developer'
   },

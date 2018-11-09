@@ -4,7 +4,7 @@ import Wrapper from './Wrapper';
 import GithubIcon from 'super-tiny-icons/images/svg/github.svg';
 import TelegramIcon from 'super-tiny-icons/images/svg/telegram.svg';
 import TwitterIcon from 'super-tiny-icons/images/svg/twitter.svg';
-import {Check} from 'styled-icons/fa-solid/Check.cjs';
+import {Check} from 'styled-icons/material/Check.cjs';
 import {colors} from '../theme';
 
 const List = props => (
@@ -68,7 +68,7 @@ export default () => (
         </Flex>
       </Box>
       <Box width={[1, 0.6]}>
-        <Image src="/static/mbp.svg" alt="etherpass" width={[1, 800]} />
+        <Image src="/static/mbp-alt.svg" alt="etherpass" width={[1, 800]} />
       </Box>
     </Flex>
   </Wrapper>

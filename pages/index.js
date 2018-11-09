@@ -13,7 +13,7 @@ import theme from '../theme';
 
 const Home = () => (
   <Provider theme={theme}>
-    <Head title="Etherpass – Most trusted password manager" />
+    <Head />
     <Nav />
     <Hero />
     <Subscribe

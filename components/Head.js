@@ -2,14 +2,16 @@ import React from 'react';
 import NextHead from 'next/head';
 import {string} from 'prop-types';
 
-const defaultDescription = '';
-const defaultOGURL = '';
-const defaultOGImage = '';
+const defaultTitle = 'Etherpass – Most trusted password manager';
+const defaultDescription =
+  'Safely store and secure your passwords, tokens and private keys in a fail-operational vault with zero-knowledge access.';
+const defaultOGURL = 'https://etherpass.github.io';
+const defaultOGImage = 'https://etherpass.github.io/static/mbp.svg';
 
 const Head = props => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title || ''}</title>
+    <title>{props.title || defaultTitle}</title>
     <meta
       name="description"
       content={props.description || defaultDescription}
@@ -19,7 +21,7 @@ const Head = props => (
       content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, user-scalable=no"
     />
     <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
-    <link rel="apple-touch-icon" href="/static/touch-icon.png" />
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
     <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
     <link rel="icon" href="/static/favicon.ico" />
     <meta property="og:url" content={props.url || defaultOGURL} />

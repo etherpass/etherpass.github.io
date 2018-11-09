@@ -22,7 +22,7 @@ const features = [
   ),
   createFeature(
     'Fail-operational',
-    'Etherpass services will be operational even in a case of total disaster meaning your never lost your data.',
+    'Etherpass services will be operational even in a case of total disaster meaning you never lost your data.',
     '../static/undraw_QA_engineers_dg5p.svg'
   )
 ];

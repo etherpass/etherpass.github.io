@@ -101,10 +101,11 @@ const Logo = () => (
 const NavItem = props => (
   <ReLink
     color="black"
-    m={2}
-    p={2}
+    m={[1, 1, 2]}
+    p={[1, 1, 2]}
     css={{
-      textDecoration: 'none'
+      textDecoration: 'none',
+      whiteSpace: 'nowrap'
     }}
     {...props}
   />
@@ -112,6 +113,7 @@ const NavItem = props => (
 
 export default () => (
   <Box
+    as="header"
     bg="white"
     css={{
       position: 'fixed',
