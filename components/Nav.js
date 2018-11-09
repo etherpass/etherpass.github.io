@@ -132,7 +132,7 @@ export default () => (
           <NavItem href="#how">How it works</NavItem>
           <NavItem href="#team">Team</NavItem>
           <NavItem href="#roadmap">Roadmap</NavItem>
-          <NavItem href="#subscribe" mr={0} pr={0}>
+          <NavItem href="#subscribe" mr={[0, 0, 0]} pr={[0, 0, 0]}>
             <Button variant="primary" css={{height: '52px'}}>
               Join the waitlist
             </Button>
