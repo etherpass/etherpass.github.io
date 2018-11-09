@@ -9,7 +9,7 @@ import {colors} from '../theme';
 
 export const Social = ({Icon, href}) => (
   <Circle mr={3}>
-    <Link href={href} color={colors.primary}>
+    <Link href={href} color={colors.primary} target="_blank" rel="noopener">
       <Icon size={32} />
     </Link>
   </Circle>
@@ -23,7 +23,7 @@ export default () => (
           <Text color="white">© {new Date().getFullYear()} Etherpass</Text>
         </Box>
         <Flex ml="auto">
-          <Social href="https://t.me/etherpass_community" Icon={Telegram} />
+          <Social href="https://t.me/etherpass" Icon={Telegram} />
           <Social href="https://github.com/etherpass" Icon={Github} />
           <Social href="https://twitter.com/etherpass_app" Icon={Twitter} />
         </Flex>

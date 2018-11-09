@@ -62,7 +62,7 @@ export default () => (
           </List>
         </Box>
         <Flex>
-          <Social Icon={TelegramIcon} href="https://t.me/etherpass_community" />
+          <Social Icon={TelegramIcon} href="https://t.me/etherpass" />
           <Social Icon={GithubIcon} href="https://github.com/etherpass" />
           <Social Icon={TwitterIcon} href="https://twitter.com/etherpass_app" />
         </Flex>

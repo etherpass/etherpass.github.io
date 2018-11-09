@@ -6,7 +6,7 @@ const defaultTitle = 'Etherpass – Most trusted password manager';
 const defaultDescription =
   'Safely store and secure your passwords, tokens and private keys in a fail-operational vault with zero-knowledge access.';
 const defaultOGURL = 'https://etherpass.github.io';
-const defaultOGImage = 'https://etherpass.github.io/static/mbp.svg';
+const defaultOGImage = 'https://etherpass.github.io/static/mbp-alt.svg';
 
 const Head = props => (
   <NextHead>
