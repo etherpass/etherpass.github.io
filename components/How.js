@@ -11,7 +11,7 @@ const createStep = (title, content, image) => ({
 const steps = [
   createStep(
     `Download and install the app`,
-    `Get the most recent release for your platform on the website.`,
+    `Get the most recent release for your platform.`,
     '/static/undraw_setup_wizard_r6mr.svg'
   ),
   createStep(

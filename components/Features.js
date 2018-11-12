@@ -17,7 +17,7 @@ const features = [
   ),
   createFeature(
     'End-to-end encryption',
-    'Zero-knowledge proof with the end-2-end encryptions guarantees only you can access your data.',
+    'Zero-knowledge proof with the end-2-end encryption guarantees only you can access your data.',
     '../static/undraw_security_o890.svg'
   ),
   createFeature(

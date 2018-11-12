@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "NODE_ENV=production next -p $PORT",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && next export && touch out/.nojekyll && push-dir --dir=out --branch=master --cleanup --verbose"
   },
   "dependencies": {
     "next": "^7.0.0",
@@ -16,6 +17,7 @@
     "super-tiny-icons": "^0.1.5"
   },
   "devDependencies": {
-    "babel-plugin-inline-react-svg": "^1.0.1"
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "push-dir": "^0.4.1"
   }
 }

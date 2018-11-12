@@ -9,25 +9,25 @@ const team = [
     name: `Roman Chuprikov`,
     bio: `5+ years of developing high-performant financial applications, Ethereum adopter since it’s raise.`,
     src: `https://github.com/paradise`,
-    role: '@blockhain @backend'
+    role: '#blockhain #backend'
   },
   {
     name: `Sergey Troshkin`,
     bio: `3+ years on working with the Blockchain, backend professional with more than 10 years experience.`,
     src: `https://github.com/troshkin`,
-    role: '@blockhain @backend'
+    role: '#blockhain #backend'
   },
   {
     name: `Artyom Neustroev`,
     bio: `5+ years experience in Web development. Making frontend developers happier bringing the brilliant devops solutions in the last 2 years.`,
     src: `https://github.com/neustroev`,
-    role: '@frontend @devops'
+    role: '#frontend #devops'
   },
   {
     name: `Aleksandr Skakovskiy`,
     bio: `3+ years in product management. Passionate about great user experience mixed with the cutting-edge technologies.`,
     src: `https://github.com/optimusway`,
-    role: '@product @frontend'
+    role: '#product #frontend'
   }
 ];
 

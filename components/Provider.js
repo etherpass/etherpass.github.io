@@ -4,7 +4,7 @@ import {normalize} from 'polished';
 import theme from '../theme';
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,700|PT+Sans:700');  
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,700|PT+Sans:700');
   
   ${normalize()};
 
