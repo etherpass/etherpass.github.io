@@ -1,0 +1,23 @@
+{
+  "name": "etherpass-www",
+  "scripts": {
+    "dev": "NODE_ENV=production next -p $PORT",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "next build && next export && touch out/.nojekyll && push-dir --dir=out --branch=master --cleanup --verbose"
+  },
+  "dependencies": {
+    "next": "^7.0.0",
+    "polished": "^2.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "rebass": "^3.0.0-9",
+    "styled-components": "^4.0.3",
+    "styled-icons": "^3.1.0",
+    "super-tiny-icons": "^0.1.5"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "push-dir": "^0.4.1"
+  }
+}
