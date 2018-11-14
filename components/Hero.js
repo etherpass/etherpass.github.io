@@ -68,7 +68,11 @@ export default () => (
         </Flex>
       </Box>
       <Box width={[1, 0.6]}>
-        <Image src="/static/mbp-alt.svg" alt="etherpass" width={[1, 800]} />
+        <Image
+          src="/static/mbp-alt-opti.png"
+          alt="etherpass"
+          width={[1, 800]}
+        />
       </Box>
     </Flex>
   </Wrapper>
